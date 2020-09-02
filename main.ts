@@ -13,9 +13,9 @@ namespace SW07
         setreg(ADC_REG_CONF, ADC_CONF_CYC_TIME_256)
     }
 
-    function getUInt16LE(reg: number): number {
+    function getUInt16BE(reg: number): number {
         pins.i2cWriteNumber(ADC_I2C_ADDRESS, reg, NumberFormat.UInt8BE);
-        return pins.i2cReadNumber(ADC_I2C_ADDRESS, NumberFormat.UInt16LE);
+        return pins.i2cReadNumber(ADC_I2C_ADDRESS, NumberFormat.UInt16BE);
     }
 
     function readVoltage()
@@ -24,7 +24,7 @@ namespace SW07
         let a: NumberFormat.UInt8LE
         let b: NumberFormat.UInt8LE
 
-	    data = getUInt16LE(ADC_REG_RESULT)
+	    data = getUInt16BE(ADC_REG_RESULT)
 
 	    a = (data & 0xFF00) >> 8
 	    b = (data & 0x00FF) >> 0
