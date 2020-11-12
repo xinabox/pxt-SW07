@@ -3,8 +3,7 @@
     "version": "0.1.0",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "radio": "*"
+        "core": "*"
     },
     "files": [
         "README.md",
@@ -15,7 +14,12 @@
         "test.ts"
     ],
     "public": true,
+    "targetVersions": {
+        "target": "0.13.64",
+        "targetId": "maker"
+    },
     "supportedTargets": [
+        "maker",
         "microbit"
     ],
     "preferredEditor": "tsprj"

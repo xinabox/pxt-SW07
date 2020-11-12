@@ -50,7 +50,7 @@ namespace SW07
     export function getMoisture(): number
     {
         let value = getVoltage()
-        return pins.map(value, 0, 2.63, 0, 100)
+        return Math.map(value, 0, 2.63, 0, 100)
     }
 
     init()
