@@ -14,10 +14,6 @@
         "test.ts"
     ],
     "public": true,
-    "targetVersions": {
-        "target": "0.13.64",
-        "targetId": "maker"
-    },
     "supportedTargets": [
         "maker",
         "microbit"
